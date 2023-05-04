@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Form from "./Form";
 import DisplayData from "./DisplayData";
+import Form2 from "./Form2";
 
 function Parent() {
   const [firstName, setFirstName] = useState("");
@@ -12,8 +13,7 @@ function Parent() {
   function handleLastNameChange(event) {
     setLastName(event.target.value);
   }
-  console.log(firstName);
-  console.log(lastName);
+
   return (
     <div>
       <Form
@@ -23,6 +23,7 @@ function Parent() {
         handleFirstName={handleFirstNameChange}
       />
       <DisplayData firstName={firstName} lastName={lastName} />
+      <Form2 />
     </div>
   );
 }
